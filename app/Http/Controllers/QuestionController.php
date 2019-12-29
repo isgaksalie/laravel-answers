@@ -89,7 +89,7 @@ class QuestionController extends Controller
     {
         $question = Question::findOrFail($id);
         log::info('Question with the id ' . $question->id. 'successfully save to the DB');
-        log::info($question);
+//        log::info('qqqqqqqqqqqqqqqqqqqqqqaaaaaaaaaaaaaaaaaaaaaaaa '. $question->answers());
 
         return view('questions.show')->with('question',$question);
     }

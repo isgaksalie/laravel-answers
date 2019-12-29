@@ -15,18 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('index');;
 
-//Route::get('/about', 'PageController@about')->name('about');;
-//Route::get('/contact', 'PageController@contact')->name('contact');
-//Route::get('/create', 'QuestionController@store')->name('store');
+Route::get('/about', 'PageController@about')->name('about');;
 
 Route::resource('questions', 'QuestionController');
+Route::resource('answers', 'AnswersController', ['except' => ['index', 'create', 'show']]);
 
-
-
-//Route::get('questions/show?{$id}', function() {
-//    return view('questions.show');
-//})->name('blah');
-
-//Route::get('/recent', function () {
-//    return view('recent');
-//})->name('recent');;
+Auth::routes();

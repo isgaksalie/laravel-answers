@@ -8,7 +8,7 @@
 
         @foreach($questions as $question)
             <div class="card-body">
-                <h3 class="card-title">{{ $question->id }}. {{ $question->title }}</h3>
+                <h3 class="card-title">{{ $question->title }}</h3>
                 <p> {{ $question->description }}</p>
                 <a href="{{ route('questions.show', $question->id) }}" class="btn btn-primary btn-sm">See question</a>
                 <hr>
